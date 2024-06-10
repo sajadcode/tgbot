@@ -1,1 +1,16 @@
-composer init
+{
+    "name": "yourname/yourproject",
+    "description": "A Telegram Bot written in PHP",
+    "require": {
+        "php": "^7.4",
+        "guzzlehttp/guzzle": "^7.0" // For making HTTP requests to the Telegram API
+    },
+    "autoload": {
+        "psr-4": {
+            "YourNamespace\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --bootstrap vendor/autoload.php tests"
+    }
+}
